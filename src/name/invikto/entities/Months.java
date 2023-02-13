@@ -1,5 +1,7 @@
 package name.invikto.entities;
 
+import org.jetbrains.annotations.Nullable;
+
 import static name.invikto.utils.ConsoleLogger.logError;
 
 public enum Months {
@@ -26,7 +28,7 @@ public enum Months {
     return month;
   }
 
-  public static String getMonthByIndex(int index) {
+  public static @Nullable String getMonthByIndex(int index) {
     try {
       return Months.values()[index - 1].getMonth();
     } catch (ArrayIndexOutOfBoundsException error) {
